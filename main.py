@@ -197,9 +197,12 @@ def guardar_nuevo_las(new_las):
 
 
 def enviar_archivo(path, name):
-    response = make_response(send_file(path))
-    response.headers["Content-Disposition"] = f"attachment; filename={name}"
-    return response
+    return send_file(
+        path, 
+        as_attachment=True, 
+        download_name=name, 
+        mimetype='application/octet-stream'
+    )
 
 def limpiar_carpeta_archivos_guardados():
     directorio_guardado = os.path.join(os.getcwd(), "archivos_guardados")
