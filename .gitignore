@@ -1,0 +1,13 @@
+# Ignorar directorio de archivos compilados y generados automáticamente
+/__pycache__/
+*.pyc
+*.pyo
+
+# Ignorar directorio de configuración de Visual Studio Code
+.vscode/
+
+# Ignorar archivos de entorno
+*.env
+
+# Ignorar directorio de archivos guardados
+/archivos_guardados/
